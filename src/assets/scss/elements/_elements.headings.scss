@@ -14,10 +14,30 @@ h6 {
 }
 
 h1,
-.h1 {}
+.h1 {
+  @include font-size(28px);
+  
+  @include min-screen($breakpoint-tiny) {
+    @include font-size(38px);
+  }
+  
+  @include min-screen($breakpoint-small) {
+    @include font-size(48px);
+  }
+  
+  @include min-screen($breakpoint-medium) {
+    @include font-size(58px);
+  }
+  
+  @include min-screen($breakpoint-large) {
+    @include font-size(68px);
+  }
+}
 
 h2,
-.h2 {}
+.h2 {
+  @include font-size(18px);
+}
 
 h3,
 .h3 {}

@@ -1,11 +1,8 @@
 $color-white: #fff;
-$color-black: #000;
-$color-base: $color-black;
+$color-base: #0073E6;
 
-$color-text: $color-base;
+$color-text: $color-white;
 
-$color-text-active: $color-black;
-$color-text-click: lighten($color-base, 10%);
 $color-link: $color-base;
 
 $color-btn: $color-base;
@@ -13,6 +10,7 @@ $color-btn-hover: darken($color-base, 5%);
 $color-btn-focus: darken($color-base, 10%);
 $color-btn-active: darken($color-base, 15%);
 
-$color-input: $color-black;
-$color-input-placeholder: rgba($color-black, .5);
-$color-border: $color-black;
+$color-input: $color-white;
+$color-input-placeholder: $color-white;
+$color-border: #163B60;
+

@@ -3,7 +3,7 @@
 \*------------------------------------ */
 
 .wrapper {
-  width: 100%;
+  width: $page-default-width;
   max-width: 100%;
   padding-right: $spacing-unit--small;
   padding-left: $spacing-unit--small;
@@ -11,7 +11,6 @@
   margin-left: auto;
 
   @include min-screen($breakpoint-large) {
-    max-width: calc(#{$page-default-width} + (#{$spacing-unit} * 2));
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
   }
