@@ -4,7 +4,8 @@
 
 a {
   color: $color-link;
-  transition: color .15s ease;
+  transition: color $transition-speed ease, border $transition-speed ease;
+  text-decoration: none;
 
   &:hover {
     color: darken($color-link, 20%);

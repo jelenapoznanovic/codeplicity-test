@@ -1,3 +1,42 @@
 .header-main {
   @include min-screen($breakpoint-medium) {}
 }
+
+.header-main__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.site-logo {
+  font-weight: 700;
+  @include font-size(20px);
+  
+  @include min-screen($breakpoint-medium) {
+    @include font-size(32px);
+  }
+}
+
+.login {
+  @include font-size(14px);
+  display: flex;
+  width: 100px;
+  height: 50px;
+  border: 2px solid $color-border;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  
+  &:hover {
+    // color: darken($color-white, 20%);
+    border: 2px solid $color-border-hover;
+    color: $color-white;
+  }
+}
+
+.site-logo,
+.login {
+  color: $color-white;
+  text-transform: uppercase;
+}

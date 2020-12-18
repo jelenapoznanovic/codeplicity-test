@@ -4,12 +4,12 @@
   vertical-align: middle;
   text-decoration: none;
   color: $color-base;
-  transition: background-color .2s ease, color .2s ease;
+  transition: background-color $transition-speed ease, color $transition-speed ease;
   border: none;
   padding: 0;
   margin: 0;
   outline: none;
-  transition: all .2s ease;
+  transition: all $transition-speed ease;
   background-color: transparent;
   cursor: pointer;
   font-family: $base-font-family;

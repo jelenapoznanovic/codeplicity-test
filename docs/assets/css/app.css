@@ -228,7 +228,8 @@ h2,
 \*------------------------------------ */
 a {
   color: #0073E6;
-  transition: color .15s ease; }
+  transition: color 0.15s ease, border 0.15s ease;
+  text-decoration: none; }
   a:hover {
     color: #004080; }
   a:focus, a:active {
@@ -250,6 +251,43 @@ a {
       padding-right: 20px;
       padding-left: 20px; } }
 
+.header-main__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0; }
+
+.site-logo {
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.05; }
+  @media screen and (min-width: 1024px) {
+    .site-logo {
+      font-size: 32px;
+      font-size: 2rem;
+      line-height: 1.03125; } }
+
+.login {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.07143;
+  display: flex;
+  width: 100px;
+  height: 50px;
+  border: 2px solid #163B60;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center; }
+  .login:hover {
+    border: 2px solid #1b4875;
+    color: #fff; }
+
+.site-logo,
+.login {
+  color: #fff;
+  text-transform: uppercase; }
+
 /**
 * Reset input styles.
 */
@@ -258,7 +296,7 @@ a {
   /* removing inner shadow on iOS inputs */
   -webkit-font-smoothing: inherit;
   box-sizing: border-box;
-  transition: all .5s ease;
+  transition: all 0.15s ease;
   background: none;
   border: none;
   color: #0073E6;
@@ -299,12 +337,12 @@ a {
   vertical-align: middle;
   text-decoration: none;
   color: #0073E6;
-  transition: background-color .2s ease, color .2s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
   border: none;
   padding: 0;
   margin: 0;
   outline: none;
-  transition: all .2s ease;
+  transition: all 0.15s ease;
   background-color: transparent;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;

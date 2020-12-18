@@ -6,7 +6,7 @@
   /* removing inner shadow on iOS inputs */
   -webkit-font-smoothing: inherit;
   box-sizing: border-box;
-  transition: all .5s ease;
+  transition: all $transition-speed ease;
   background: none;
   border: none;
   color: $color-base;
