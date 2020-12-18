@@ -7,8 +7,51 @@
 {% block content %}
 {% include "./components/header.html" -%}
 
-<div>
-</div>
+<main>
+  <section class="main-content">
+    <div class="wrapper">
+      <div bp="grid">
+        <div bp="5@md">
+          {{ allMacros.image('1280px', 'img1.png', 'img1@2x.png', 'Girl') }}
+        </div>
+        <div bp="7@md">
+          <h1>Lorem ipsum dolor sit amet</h1>
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <form>
+            <label>
+              <input class="input input--primary" type="text" placeholder="Username">
+            </label>
+            <label>
+              <input class="input input--primary" type="email" placeholder="Email address">
+            </label>
+            <label>
+              <input class="input input--primary" type="password" placeholder="Password">
+            </label>
+            <select>
+              <option value="" disabled selected hidden>Age</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+              <option>Option 4</option>
+            </select>
+            <select>
+              <option value="" disabled selected hidden>Orientation</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+              <option>Option 4</option>
+            </select>
+            <button class="button btn--primary">Join us</button>
+            <label>
+              <input type="checkbox">
+              <span>website.com is a site dedicated to people above 18 years old, looking for casual dating and meeting a life partner. To join you must have read and agree to our Terms and Conditions and Privacy Policy.</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 {% include "./components/footer.html" -%}
 

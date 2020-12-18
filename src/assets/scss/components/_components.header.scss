@@ -16,6 +16,10 @@
   @include min-screen($breakpoint-medium) {
     @include font-size(32px);
   }
+
+  &:hover {
+    color: $color-base;
+  }
 }
 
 .login {
@@ -29,8 +33,7 @@
   align-items: center;
   
   &:hover {
-    // color: darken($color-white, 20%);
-    border: 2px solid $color-border-hover;
+    border: 2px solid $color-base;
     color: $color-white;
   }
 }

@@ -1,13 +1,8 @@
-{% macro arrow(src, customClass, href, arrowUp) %}
+{% macro image(minWidth, src, src2x, alt) %}
 
-{% if arrowUp %}
-<a class="arrow arrow--up {{ customClass }}" href="{{ href }}">
-  <img src="assets/img/{{ src }}.svg" alt="">
-</a>
-{% else %}
-<a class="arrow {{ customClass }}" href="{{ href }}">
-  <img src="assets/img/{{ src }}.svg" alt="">
-</a>
-{% endif %}
+<picture>
+  <source media="(min-width:{{ minWidth }})" srcset="assets/images/{{ src2x }}">
+  <img src="assets/images/{{ src }}" alt="{{ alt }}">
+</picture>
 
 {% endmacro %}
