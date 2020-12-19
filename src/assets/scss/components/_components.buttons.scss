@@ -37,6 +37,8 @@
 
 
 .button--primary {
+  justify-content: center;
+  text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   height: $btn--primary-height;
@@ -45,11 +47,19 @@
   color: $color-btn;
   font-size: $base-font-size;
   text-decoration: none;
+  background-color: $color-base;
+  @include font-size(24px);
 
   &:not(:disabled) {
 
     &:hover,
     &:focus,
-    &:active {}
+    &:active {
+      background-color: $color-border;
+    }
   }
+}
+
+.button--full-width {
+  width: 100%;
 }

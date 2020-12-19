@@ -9,11 +9,11 @@
   transition: all $transition-speed ease;
   background: none;
   border: none;
-  color: $color-base;
+  color: $color-input;
   width: 100%;
   display: inline-block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  @include font-size(14px);
   padding: 0;
   /* remove browser defaults */
   vertical-align: middle;
@@ -33,8 +33,8 @@
     /* remove IE clear icon */
   }
 
-  @mixin input-placeholder {
-    color: $color-base;
+  @include input-placeholder {
+    color: $color-input;
   }
 
   &:not(:disabled) {
@@ -52,14 +52,20 @@
   padding: $input-padding;
   color: $color-input;
   display: flex;
+  border: 2px solid $color-border;
+  border-radius: $base-radius;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 
   &:not(:disabled) {
 
-    &:hover {}
+    &:hover,
+    &:focus {
+      border: 2px solid $color-base;
+    }
 
-    &:focus {}
-
-    @mixin input-placeholder {
+    @include input-placeholder {
       color: $color-input-placeholder;
     }
   }

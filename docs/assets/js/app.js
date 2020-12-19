@@ -2,7 +2,12 @@
 "use strict";
 
 // ON DOCUMENT READY
-$(document).ready(function () {});
+$(document).ready(function () {
+  $(".select").chosen({
+    disable_search_threshold: 10,
+    width: "100%"
+  });
+});
 
 },{}]},{},[1])
 

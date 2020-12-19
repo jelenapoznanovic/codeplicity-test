@@ -25,6 +25,10 @@
 @import "./components/components.inputs";
 @import "./components/components.buttons";
 @import "./components/components.main-content";
+@import "./components/components.form";
+@import 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css';
+@import "./components/components.select-box";
+@import "./components/components.checkbox";
 
 @import "./trumps/trumps.helpers";
 @import "./trumps/trumps.spacing";

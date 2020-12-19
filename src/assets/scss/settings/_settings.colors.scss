@@ -5,13 +5,13 @@ $color-text: $color-white;
 
 $color-link: $color-base;
 
-$color-btn: $color-base;
+$color-btn: $color-text;
 $color-btn-hover: darken($color-base, 5%);
 $color-btn-focus: darken($color-base, 10%);
 $color-btn-active: darken($color-base, 15%);
 
-$color-input: $color-white;
-$color-input-placeholder: $color-white;
+$color-input: $color-text;
+$color-input-placeholder: $color-text;
 $color-border: #163B60;
 $color-border-hover: lighten($color-border, 5%);
 

@@ -1,4 +1,27 @@
 .main-content {
-  @include min-screen($breakpoint-medium) {}
+  
+  @include min-screen($breakpoint-small) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+
+    @include min-screen($breakpoint-small) {
+      text-align: right;
+    }
+  }
+  
+  h2 {
+    margin-bottom: 30px;
+    
+    @include min-screen($breakpoint-medium) {
+      margin-bottom: 70px;
+    }
+  }
 }
+
 
