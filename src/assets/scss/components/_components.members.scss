@@ -1,0 +1,33 @@
+.members {
+  background-color: #0D1621;
+  padding: 30px 0 40px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 25px;
+  }
+}
+
+.members__images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+
+    a {
+      display: block;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    picture {
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
+}
+

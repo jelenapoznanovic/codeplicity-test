@@ -73,6 +73,10 @@
   &:-ms-input-placeholder {
     @content;
   }
+
+  &::placeholder {
+    @content;
+  }
 }
 
 @mixin unselectable {

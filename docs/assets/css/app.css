@@ -996,6 +996,7 @@ a {
   margin-left: auto; }
   @media screen and (min-width: 1280px) {
     .wrapper {
+      width: calc(1240px + (20px * 2));
       padding-right: 20px;
       padding-left: 20px; } }
 
@@ -1136,6 +1137,8 @@ a {
     color: #fff; }
   .input:-ms-input-placeholder {
     color: #fff; }
+  .input::placeholder {
+    color: #fff; }
   .input:not(:disabled):focus {
     outline: none; }
 
@@ -1162,14 +1165,23 @@ a {
     color: rgba(255, 255, 255, 0.5); }
   .input--primary:not(:disabled):focus:-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.5); }
+  .input--primary:not(:disabled):focus::placeholder {
+    color: rgba(255, 255, 255, 0.5); }
   .input--primary:not(:disabled)::-webkit-input-placeholder {
-    color: #fff; }
+    color: #fff;
+    opacity: 1; }
   .input--primary:not(:disabled):-moz-placeholder {
-    color: #fff; }
+    color: #fff;
+    opacity: 1; }
   .input--primary:not(:disabled)::-moz-placeholder {
-    color: #fff; }
+    color: #fff;
+    opacity: 1; }
   .input--primary:not(:disabled):-ms-input-placeholder {
-    color: #fff; }
+    color: #fff;
+    opacity: 1; }
+  .input--primary:not(:disabled)::placeholder {
+    color: #fff;
+    opacity: 1; }
   .input--primary:disabled {
     opacity: 0.5;
     cursor: not-allowed !important; }
@@ -1366,7 +1378,7 @@ a {
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg); }
         .styled-checkbox + label span b:before, .styled-checkbox + label span b:after {
-          content: '';
+          content: "";
           display: block;
           width: 2px;
           height: 0;
@@ -1381,69 +1393,50 @@ a {
         .styled-checkbox + label span b:after {
           width: 0;
           height: 2px; }
+    .styled-checkbox + label:hover span {
+      border: 2px solid #0073E6; }
+  .styled-checkbox:checked + label span {
+    border: 2px solid #0073E6; }
+    .styled-checkbox:checked + label span b:before {
+      height: 9px;
+      transition: all 0.05s ease 0.1s; }
+    .styled-checkbox:checked + label span b:after {
+      width: 15px;
+      transition: all 0.1s ease 0.15s; }
+  .styled-checkbox[disabled] + label {
+    color: #a1a9b3 !important;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default; }
+    .styled-checkbox[disabled] + label span {
+      background-color: #d0d4d9 !important;
+      border-color: #d0d4d9 !important; }
 
-.checkbox_wrap label:hover span {
-  border: 2px solid #0073E6; }
-
-.styled-checkbox:checked + label span {
-  border: 2px solid #0073E6; }
-  .styled-checkbox:checked + label span b:before {
-    height: 9px;
-    transition: all .05s ease .1s; }
-  .styled-checkbox:checked + label span b:after {
-    width: 15px;
-    transition: all .1s ease .15s; }
-
-.styled-checkbox[disabled] + label {
-  color: #a1a9b3 !important;
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  cursor: default; }
-
-.styled-checkbox[disabled] + label span {
-  background-color: #d0d4d9 !important;
-  border-color: #d0d4d9 !important; }
-
-.checkbox-custom {
-  opacity: 0;
-  position: absolute; }
-
-.checkbox-custom, .checkbox-custom-label {
-  display: inline;
-  vertical-align: middle;
-  margin: 5px;
-  cursor: pointer; }
-
-.checkbox-custom-label {
-  position: relative; }
-
-.checkbox-custom + .checkbox-custom-label:before {
-  content: '';
-  background: #2d2e30;
-  border: 2px solid #1eccd2;
-  border-radius: 40px;
-  display: inline;
-  vertical-align: middle;
-  width: 40px;
-  height: 40px;
-  padding: 20px;
-  margin-right: 10px;
+.members {
+  background-color: #0D1621;
+  padding: 30px 0 40px;
   text-align: center; }
+  .members h2 {
+    margin-bottom: 25px; }
 
-.checkbox-custom:checked + .checkbox-custom-label:before {
-  content: "\f00c";
-  font-family: 'FontAwesome';
-  font-size: 40px;
-  background: #2d2e30;
-  color: #1eccd2;
-  padding: 20px; }
-
-.checkbox-custom:focus + .checkbox-custom-label {
-  outline: 1px solid #ddd;
-  /* focus style */ }
+.members__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-gap: 20px;
+  justify-items: center; }
+  .members__images a {
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden; }
+  .members__images picture {
+    display: block; }
+    .members__images picture img {
+      width: 100%; }
 
 /* ------------------------------------*\
     #TRUMPS - SPACING

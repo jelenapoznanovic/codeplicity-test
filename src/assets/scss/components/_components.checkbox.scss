@@ -1,98 +1,105 @@
-
-  /*------------------------------------*\
+/*------------------------------------*\
       #CHECKBOXES
   \*------------------------------------*/
-  
-  .styled-checkbox {
-      opacity: 0;
+
+.styled-checkbox {
+  opacity: 0;
+  position: absolute;
+
+  & + label {
+    position: relative;
+    padding-left: 55px;
+    color: $color-text;
+    cursor: pointer;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    margin-bottom: 20px;
+    display: block;
+    @include font-size(10px);
+    line-height: 1.3;
+
+    span {
+      display: inline-block;
+      visibility: visible;
+      width: 40px;
+      height: 40px;
+      margin: 0;
       position: absolute;
+      left: 0;
+      top: 0;
+      background-color: transparent;
+      border: 2px solid $color-border;
+      border-radius: 50%;
+      box-sizing: border-box;
+      transition: border $transition-speed ease;
 
-      & + label {
-          position: relative;
-          padding-left: 55px;
-          color: $color-text;
-          cursor: pointer;
-          -moz-user-select: -moz-none;
-          -khtml-user-select: none;
-          -webkit-user-select: none;
-          -o-user-select: none;
-          user-select: none;
-          margin-bottom: 20px;
-          display: block;
-          @include font-size(10px);
-          line-height: 1.3;
-
-          span {
-              display: inline-block;
-              visibility: visible;
-              width: 40px;
-              height: 40px;
-              margin: 0;
-              position: absolute;
-              left: 0;
-              top: 0;
-              background-color: transparent;
-              border: 2px solid $color-border;
-              border-radius: 50%;
-              box-sizing: border-box;
-              transition: border $transition-speed ease;
-          
-              b {
-                  position: absolute;
-                  height: 9px;
-                  width: 15px;
-                  display: block;
-                  left: 11px;
-                  top: 11px;
-                  transform: rotate(-45deg);
-                  -webkit-transform: rotate(-45deg);
-          
-                  &:before, &:after {
-                      content: '';
-                      display: block;
-                      width: 2px;
-                      height: 0;
-                      background-color: $color-text;
-                      position: absolute;
-                      left: 0;
-                      bottom: 0;
-                      transition: none;
-                  }
-                  &:before {
-                      bottom: auto;
-                      top: 0;
-                  }
-                  &:after {
-                      width: 0;
-                      height: 2px;
-                  }
-              }
-          }
-      }
-  }
-  
-  
-  .checkbox_wrap label:hover span {
-      border: 2px solid $color-base;
-  }
-  
-  .styled-checkbox:checked + label span {
-      border: 2px solid $color-base;
-   
       b {
-          &:before {
-              height: 9px;
-              transition: all .05s ease .1s;
-          }
-          &:after {
-              width: 15px;
-              transition: all .1s ease .15s;
-          }
-  
+        position: absolute;
+        height: 9px;
+        width: 15px;
+        display: block;
+        left: 11px;
+        top: 11px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+
+        &:before,
+        &:after {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 0;
+          background-color: $color-text;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          transition: none;
+        }
+
+        &:before {
+          bottom: auto;
+          top: 0;
+        }
+
+        &:after {
+          width: 0;
+          height: 2px;
+        }
       }
+    }
+
+    &:hover {
+      span {
+        border: 2px solid $color-base;
+      }
+    }
   }
-  
-  .styled-checkbox[disabled] + label {
+
+  &:checked {
+    & + label {
+      span {
+        border: 2px solid $color-base;
+
+        b {
+          &:before {
+            height: 9px;
+            transition: all 0.05s ease 0.1s;
+          }
+
+          &:after {
+            width: 15px;
+            transition: all 0.1s ease 0.15s;
+          }
+        }
+      }
+    }
+  }
+
+  &[disabled] {
+    & + label {
       color: #a1a9b3 !important;
       -moz-user-select: -moz-none;
       -khtml-user-select: none;
@@ -100,55 +107,11 @@
       -o-user-select: none;
       user-select: none;
       cursor: default;
+
+      span {
+        background-color: #d0d4d9 !important;
+        border-color: #d0d4d9 !important;
+      }
+    }
   }
-  
-  .styled-checkbox[disabled] + label span {
-      background-color: #d0d4d9 !important;
-      border-color: #d0d4d9 !important;
-  }
-  
-  //
-  
-  .checkbox-custom {
-      opacity: 0;
-      position: absolute;
-  }
-  
-  .checkbox-custom, .checkbox-custom-label {
-      display: inline;
-      vertical-align: middle;
-      margin: 5px;
-      cursor: pointer;
-  }
-  
-  .checkbox-custom-label {
-      position: relative;
-  }
-  
-  .checkbox-custom + .checkbox-custom-label:before {
-      content: '';
-      background: #2d2e30;
-      border: 2px solid #1eccd2;
-      border-radius: 40px;
-      display: inline;
-      vertical-align: middle;
-      width: 40px;
-      height: 40px;
-      padding: 20px;
-      margin-right: 10px;
-      text-align: center;
-  }
-  
-  .checkbox-custom:checked + .checkbox-custom-label:before {
-      content: "\f00c";
-      font-family: 'FontAwesome';
-      font-size: 40px;
-      background: #2d2e30;
-      color: #1eccd2;
-      padding: 20px;
-  }
-  
-  .checkbox-custom:focus + .checkbox-custom-label {
-    outline: 1px solid #ddd; /* focus style */
-  }
-  
+}
