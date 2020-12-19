@@ -8,10 +8,10 @@
 {% include "./components/header.html" -%}
 
 <main>
-  <section>
+  <section class="main">
     <div class="wrapper">
       <div bp="grid">
-        <div bp="5@md">
+        <div bp="5@md" class="main-image">
           {{ allMacros.image('1280px', 'img1.png', 'img1@2x.png', 'Girl') }}
         </div>
         <div bp="7@md" class="main-content">
@@ -19,7 +19,7 @@
           <h2>Lorem ipsum dolor sit amet</h2>
 
           {% include "./components/form.html" -%}
-          
+
         </div>
       </div>
     </div>

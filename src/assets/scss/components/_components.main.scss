@@ -1,3 +1,10 @@
+.main {
+
+  @include min-screen($breakpoint-medium) {
+    padding-top: 30px;
+  }
+}
+
 .main-content {
   
   @include min-screen($breakpoint-small) {
@@ -25,3 +32,15 @@
 }
 
 
+.main-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  @include min-screen($breakpoint-medium) {
+    
+  }    
+    img {
+      width: 490px;
+    }
+}

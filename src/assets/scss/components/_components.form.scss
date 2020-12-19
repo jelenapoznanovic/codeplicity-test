@@ -4,7 +4,7 @@
     max-width: 100%;
   
     @include min-screen($breakpoint-small) {
-      margin: 0;
+      margin: 0 0 60px;
     }
   }
   

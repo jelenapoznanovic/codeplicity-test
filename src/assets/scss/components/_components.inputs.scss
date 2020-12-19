@@ -65,6 +65,12 @@
       border: 2px solid $color-base;
     }
 
+    &:focus {
+      @include input-placeholder {
+        color: rgba($color-input, 0.5);
+      }
+    }
+
     @include input-placeholder {
       color: $color-input-placeholder;
     }

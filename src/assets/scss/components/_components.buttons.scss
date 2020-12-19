@@ -55,7 +55,7 @@
     &:hover,
     &:focus,
     &:active {
-      background-color: $color-border;
+      background-color: lighten($color-base, 5%);
     }
   }
 }
