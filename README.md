@@ -1,3 +1,7 @@
+### Live version
+
+https://jelenapoznanovic.github.io/codeplicity-test/
+
 ### Features
 
 - **Sass support (SCSS)**  
