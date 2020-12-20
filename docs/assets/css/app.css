@@ -561,7 +561,7 @@ a {
     background-repeat: no-repeat;
     transition: transform 0.15s ease; }
 
-select {
+.select-box__element {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -586,11 +586,11 @@ select {
   padding: 0 10px;
   cursor: pointer;
   transition: border 0.15s ease; }
-  select:hover {
+  .select-box__element:hover {
     border-color: #0073E6; }
 
 /* Remove IE arrow */
-select::-ms-expand {
+.select-box__element::-ms-expand {
   display: none; }
 
 .checkbox__input {

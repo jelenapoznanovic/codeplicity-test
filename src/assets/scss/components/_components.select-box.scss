@@ -20,7 +20,7 @@
   }
 }
 
-select {
+.select-box__element {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -50,6 +50,6 @@ select {
 }
 
 /* Remove IE arrow */
-select::-ms-expand {
+.select-box__element::-ms-expand {
   display: none;
 }
