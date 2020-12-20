@@ -1,10 +1,14 @@
+/**
+* Reset button styles.
+*/
 .button {
   -webkit-font-smoothing: inherit;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
   color: $color-base;
-  transition: background-color $transition-speed ease, color $transition-speed ease;
+  transition: background-color $transition-speed ease,
+    color $transition-speed ease;
   border: none;
   padding: 0;
   margin: 0;
@@ -17,11 +21,6 @@
   line-height: 1;
 
   &:not(:disabled) {
-
-    &:hover {}
-
-    &:focus {}
-
     &:active {
       outline: none;
       box-shadow: none !important;
@@ -30,11 +29,10 @@
   }
 
   &:disabled {
-    opacity: .5;
+    opacity: 0.5;
     cursor: not-allowed !important;
   }
 }
-
 
 .button--primary {
   justify-content: center;
@@ -51,7 +49,6 @@
   @include font-size(24px);
 
   &:not(:disabled) {
-
     &:hover,
     &:focus,
     &:active {
@@ -62,4 +59,9 @@
 
 .button--full-width {
   width: 100%;
+}
+
+.button--submit {
+  border-radius: $base-radius $base-radius $secondary-radius $secondary-radius;
+  margin-bottom: 5px;
 }

@@ -38,8 +38,8 @@
   }
 
   &:not(:disabled) {
-
-    &:hover {}
+    &:hover {
+    }
 
     &:focus {
       outline: none;
@@ -59,7 +59,6 @@
   margin-bottom: 10px;
 
   &:not(:disabled) {
-
     &:hover,
     &:focus {
       border: 2px solid $color-base;
@@ -73,7 +72,7 @@
 
     @include input-placeholder {
       color: $color-input-placeholder;
-      opacity: 1
+      opacity: 1;
     }
   }
 
@@ -84,4 +83,8 @@
     opacity: 0.5;
     cursor: not-allowed !important;
   }
+}
+
+.input--top-round {
+  border-radius: $secondary-radius $secondary-radius $base-radius $base-radius;
 }

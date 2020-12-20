@@ -1,16 +1,13 @@
 .footer-main {
   padding: 36px 0;
 
-  @include min-screen($breakpoint-medium) {}
-  
   .wrapper {
     text-align: center;
-    
+
     @include min-screen($breakpoint-medium) {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
     }
   }
 
@@ -24,63 +21,55 @@
   }
 }
 
-.footer-main__content {
+.footer-main__content-text {
+  @include font-size(12px);
+  line-height: 1.25;
+  margin-bottom: 15px;
+  display: block;
 
-  small {
-    @include font-size(12px);
-    line-height: 1.25;
-    margin-bottom: 15px;
-    display: block;
+  br {
+    display: none;
 
-    br {
-      display: none;
-
-      @include min-screen($breakpoint-medium) {
-        display: block;
-      }
-    }
-    
     @include min-screen($breakpoint-medium) {
-      display: flex;
-      justify-content: flex-end;
-      text-align: right;
-      
+      display: block;
     }
+  }
+
+  @include min-screen($breakpoint-medium) {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
   }
 }
 
-.footer-main__nav {
-  
-  ul {
-    margin-bottom: 0;
-    display: flex;
-    justify-content: center;
+.footer-main__nav-list {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+
+  @include min-screen($breakpoint-medium) {
+    justify-content: flex-end;
+  }
+}
+
+.footer-main__nav-item {
+  margin: 0 5px;
+
+  a {
+    @include font-size(12px);
+    line-height: 1.28;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #0180ff;
+    }
 
     @include min-screen($breakpoint-medium) {
-      justify-content: flex-end;
-      
+      @include font-size(14px);
     }
-    
-    li {
-      margin: 0 5px;
-      
-      @include min-screen($breakpoint-medium) {
-        margin-left: 20px;
-      }
-    }
-    
-    a {
-      @include font-size(12px);
-      line-height: 1.28;
-      text-transform: uppercase;
-      
-      &:hover {
-        color: #0180ff;
-      }
-      
-      @include min-screen($breakpoint-medium) {
-        @include font-size(14px);
-      }
-    }
+  }
+
+  @include min-screen($breakpoint-medium) {
+    margin-left: 20px;
   }
 }

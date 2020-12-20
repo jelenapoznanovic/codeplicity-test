@@ -1,91 +1,55 @@
-.chosen-container {
-    height: 50px;
+.select-box {
+  display: flex;
+  height: $input-height;
+  position: relative;
 
-    &.chosen-container-active {
-
-        .chosen-single {
-
-            background: transparent;
-            border: 2px solid $color-border;
-            border-radius: $base-radius;
-            box-shadow: none;
-
-            div {
-            
-                b {
-                    background-position: 50% 50%;
-                }
-            }
-        }
-    }
-    
-    &.chosen-with-drop {
-
-        div {
-            
-            b {
-                transform: rotateX(-180deg);
-            }
-        }
-    }
-
-    .chosen-single {
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        color: $color-text;
-        text-transform: uppercase;
-        @include font-size(14px);
-        height: 100%;
-        flex: 1;
-        background: transparent;
-        border: 2px solid $color-border;
-        border-radius: $base-radius;
-        box-shadow: none;
-
-        div {
-            width: 7px;
-            margin-right: 20px;
-            
-            b {
-                background-position: 50% 50%;
-                background-image: url('../images/arrow-down-sign-to-navigate.svg');
-                background-size: 12px 7px;
-                background-repeat: no-repeat;
-                transition: transform $transition-speed ease;
-            }
-        }
-    }
-
-    &:hover {
-
-        .chosen-single,
-        .chosen-drop {
-            border: 2px solid $color-base;
-        }
-      }
-
-    .chosen-drop {
-        background-color: #162331;
-        box-shadow: none;
-        border: 2px solid $color-border;
-        border-radius: $base-radius;
-    }
-    
-    .chosen-results {
-        color: $color-text;
-        margin: 0;
-        padding: 0;
-
-        li {
-            padding: 15px;
-            transition: background-color $transition-speed ease;
-
-            &.highlighted {
-                background: $color-base;
-            }
-        }
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background-position: 50% 50%;
+    background-image: url("../images/arrow-down-sign-to-navigate.svg");
+    width: 12px;
+    height: 7px;
+    background-size: 12px 7px;
+    background-repeat: no-repeat;
+    transition: transform $transition-speed ease;
+  }
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background-image: none;
+  -moz-text-align-last: center;
+  -ms-text-align-last: center;
+  text-align-last: center;
+  text-align: center;
+  color: $color-text;
+  text-transform: uppercase;
+  @include font-size(14px);
+  height: 100%;
+  flex: 1;
+  background-color: #162331;
+  border: 2px solid $color-border;
+  border-radius: $base-radius;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: border $transition-speed ease;
 
+  &:hover {
+    border-color: $color-base;
+  }
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}

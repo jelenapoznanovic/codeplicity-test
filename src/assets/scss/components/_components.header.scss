@@ -1,5 +1,6 @@
 .header-main {
-  @include min-screen($breakpoint-medium) {}
+  @include min-screen($breakpoint-medium) {
+  }
 }
 
 .header-main__content {
@@ -12,7 +13,7 @@
 .site-logo {
   font-weight: 700;
   @include font-size(20px);
-  
+
   @include min-screen($breakpoint-medium) {
     @include font-size(32px);
   }
@@ -31,8 +32,10 @@
   border-radius: 30px;
   justify-content: center;
   align-items: center;
-  
-  &:hover {
+
+  &:hover,
+  &:focus,
+  &:active {
     border: 2px solid $color-base;
     color: $color-white;
   }

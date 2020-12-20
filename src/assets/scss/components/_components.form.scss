@@ -1,26 +1,13 @@
 .form-main {
-    margin: 0 auto;
-    width: 480px;
-    max-width: 100%;
-  
-    @include min-screen($breakpoint-small) {
-      margin: 0 0 60px;
-    }
-  }
-  
-  .form-main__item {
-    margin-bottom: 10px;
-  
-    &:first-child {
-  
-      input {
-            border-radius: $secondary-radius $secondary-radius $base-radius $base-radius;
-        }
-    }
+  margin: 0 auto;
+  width: 480px;
+  max-width: 100%;
 
-    button {
-        border-radius: $base-radius $base-radius $secondary-radius $secondary-radius;
-        margin-bottom: 5px;
-    }
+  @include min-screen($breakpoint-small) {
+    margin: 0 0 60px;
   }
-  
+}
+
+.form-main__item {
+  margin-bottom: 10px;
+}

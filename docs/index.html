@@ -30,8 +30,8 @@
     <main>
       <section class="main">
         <div class="wrapper">
-          <div bp="grid">
-            <div bp="5@md" class="main-image">
+          <div class="main__grid">
+            <div class="main__image">
 
               <picture>
                 <source media="(min-width:1280px)" srcset="assets/images/img1@2x.png">
@@ -39,14 +39,14 @@
               </picture>
 
             </div>
-            <div bp="7@md" class="main-content">
-              <h1>Lorem ipsum dolor sit amet</h1>
-              <h2>Lorem ipsum dolor sit amet</h2>
+            <div class="main__content">
+              <h1 class="main__content-heading">Lorem ipsum dolor sit amet</h1>
+              <h2 class="main__content-subheading">Lorem ipsum dolor sit amet</h2>
 
               <form class="form-main">
                 <div class="form-main__item">
                   <label>
-                    <input class="input input--primary" type="text" placeholder="Username">
+                    <input class="input input--primary input--top-round" type="text" placeholder="Username">
                   </label>
                 </div>
                 <div class="form-main__item">
@@ -59,9 +59,18 @@
                     <input class="input input--primary" type="password" placeholder="Password">
                   </label>
                 </div>
-                <div class="form-main__item">
-                  <select class="select" data-placeholder="Age">
-                    <option></option>
+                <div class="form-main__item select-box">
+                  <select>
+                    <option selected disabled hidden>Age</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                  </select>
+                </div>
+                <div class="form-main__item select-box">
+                  <select>
+                    <option selected disabled hidden>Orientation</option>
                     <option>Option 1</option>
                     <option>Option 2</option>
                     <option>Option 3</option>
@@ -69,21 +78,12 @@
                   </select>
                 </div>
                 <div class="form-main__item">
-                  <select class="select" data-placeholder="Orientation">
-                    <option></option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                    <option>Option 4</option>
-                  </select>
+                  <button class="button button--primary button--full-width button--submit">Join us</button>
                 </div>
                 <div class="form-main__item">
-                  <button class="button button--primary button--full-width">Join us</button>
-                </div>
-                <div class="form-main__item">
-                  <div class="checkbox_wrap">
-                    <input class="styled-checkbox" type="checkbox" id="chk1" name="chk" />
-                    <label for="chk1"><span><b></b></span>website.com is a site dedicated to people above 18 years old, looking for casual dating and meeting a life partner. To join you must have read and agree to our Terms and Conditions and Privacy Policy.</label>
+                  <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="checkbox" name="checkbox" />
+                    <label class="checkbox__label" for="checkbox"><span class="checkbox__icon"><b></b></span>website.com is a site dedicated to people above 18 years old, looking for casual dating and meeting a life partner. To join you must have read and agree to our Terms and Conditions and Privacy Policy.</label>
                   </div>
                 </div>
               </form>
@@ -93,9 +93,9 @@
       </section>
       <section class="members">
         <div class="wrapper">
-          <h2>Lorem ipsum dolor sit amet</h2>
+          <h2 class="members__heading">Lorem ipsum dolor sit amet</h2>
           <div class="members__images">
-            <a href="">
+            <a href="#" class="members__images-link">
 
               <picture>
                 <source media="(min-width:1280px)" srcset="assets/images/member1@2x.png">
@@ -103,7 +103,7 @@
               </picture>
 
             </a>
-            <a href="">
+            <a href="#" class="members__images-link">
 
               <picture>
                 <source media="(min-width:1280px)" srcset="assets/images/member2@2x.png">
@@ -111,7 +111,7 @@
               </picture>
 
             </a>
-            <a href="">
+            <a href="#" class="members__images-link">
 
               <picture>
                 <source media="(min-width:1280px)" srcset="assets/images/member3@2x.png">
@@ -119,7 +119,7 @@
               </picture>
 
             </a>
-            <a href="">
+            <a href="#" class="members__images-link">
 
               <picture>
                 <source media="(min-width:1280px)" srcset="assets/images/member4@2x.png">
@@ -127,7 +127,7 @@
               </picture>
 
             </a>
-            <a href="">
+            <a href="#" class="members__images-link">
 
               <picture>
                 <source media="(min-width:1280px)" srcset="assets/images/member5@2x.png">
@@ -135,7 +135,7 @@
               </picture>
 
             </a>
-            <a href="">
+            <a href="#" class="members__images-link">
 
               <picture>
                 <source media="(min-width:1280px)" srcset="assets/images/member6@2x.png">
@@ -143,7 +143,7 @@
               </picture>
 
             </a>
-            <a href="">
+            <a href="#" class="members__images-link">
 
               <picture>
                 <source media="(min-width:1280px)" srcset="assets/images/member7@2x.png">
@@ -162,12 +162,12 @@
         <a href="index.html" class="site-logo">website.com</a>
 
         <div class="footer-main__content">
-          <small>The limitation of liability statement: <br> This website contains profiles and photos of people you may know. <br> All persons appearing on the website are guaranteed to be at least 18 years of age.</small>
+          <small class="footer-main__content-text">The limitation of liability statement: <br> This website contains profiles and photos of people you may know. <br> All persons appearing on the website are guaranteed to be at least 18 years of age.</small>
           <nav class="footer-main__nav">
-            <ul>
-              <li><a href="">Terms of use</a></li>
-              <li><a href="">Privacy policy</a></li>
-              <li><a href="">Support</a></li>
+            <ul class="footer-main__nav-list">
+              <li class="footer-main__nav-item"><a href="">Terms of use</a></li>
+              <li class="footer-main__nav-item"><a href="">Privacy policy</a></li>
+              <li class="footer-main__nav-item"><a href="">Support</a></li>
             </ul>
           </nav>
         </div>
@@ -176,7 +176,6 @@
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 

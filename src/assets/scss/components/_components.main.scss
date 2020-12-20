@@ -1,46 +1,55 @@
 .main {
-
   @include min-screen($breakpoint-medium) {
     padding-top: 30px;
   }
 }
 
-.main-content {
-  
+.main__grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.main__content {
+  max-width: 100%; //FF fix
+  grid-column: span 12;
+
   @include min-screen($breakpoint-small) {
+    grid-column: span 7 / span 7;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-  
-  h1,
-  h2 {
-    text-align: center;
+}
 
-    @include min-screen($breakpoint-small) {
-      text-align: right;
-    }
-  }
-  
-  h2 {
-    margin-bottom: 30px;
-    
-    @include min-screen($breakpoint-medium) {
-      margin-bottom: 70px;
-    }
+.main__content-heading,
+.main__content-subheading {
+  text-align: center;
+
+  @include min-screen($breakpoint-small) {
+    text-align: right;
   }
 }
 
+.main__content-subheading {
+  margin-bottom: 30px;
 
-.main-image {
+  @include min-screen($breakpoint-medium) {
+    margin-bottom: 70px;
+  }
+}
+
+.main__image {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  grid-column: span 12;
 
-  @include min-screen($breakpoint-medium) {
-    
-  }    
-    img {
-      width: 490px;
-    }
+  img {
+    width: 490px;
+  }
+
+  @include min-screen($breakpoint-small) {
+    grid-column: span 5 / span 5;
+  }
 }

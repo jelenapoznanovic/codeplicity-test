@@ -1,14 +1,10 @@
-/* ------------------------------------*\
-    #HEADINGS
-\*------------------------------------ */
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  >a {
+  > a {
     color: inherit;
   }
 }
@@ -19,19 +15,19 @@ h1,
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.17;
-  
+
   @include min-screen($breakpoint-tiny) {
     @include font-size(38px);
   }
-  
+
   @include min-screen($breakpoint-small) {
     @include font-size(48px);
   }
-  
+
   @include min-screen($breakpoint-medium) {
     @include font-size(58px);
   }
-  
+
   @include min-screen($breakpoint-large) {
     @include font-size(68px);
   }
@@ -42,15 +38,3 @@ h2,
   @include font-size(18px);
   text-transform: uppercase;
 }
-
-h3,
-.h3 {}
-
-h4,
-.h4 {}
-
-h5,
-.h5 {}
-
-h6,
-.h6 {}

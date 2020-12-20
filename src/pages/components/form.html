@@ -3,7 +3,7 @@
 <form class="form-main">
     <div class="form-main__item">
         <label>
-            <input class="input input--primary" type="text" placeholder="Username">
+            <input class="input input--primary input--top-round" type="text" placeholder="Username">
         </label>
     </div>
     <div class="form-main__item">
@@ -16,9 +16,18 @@
             <input class="input input--primary" type="password" placeholder="Password">
         </label>
     </div>
-    <div class="form-main__item">
-        <select class="select" data-placeholder="Age">
-            <option></option>
+    <div class="form-main__item select-box">
+        <select>
+            <option selected disabled hidden>Age</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+        </select>
+    </div>
+    <div class="form-main__item select-box">
+        <select>
+            <option selected disabled hidden>Orientation</option>
             <option>Option 1</option>
             <option>Option 2</option>
             <option>Option 3</option>
@@ -26,21 +35,12 @@
         </select>
     </div>
     <div class="form-main__item">
-        <select class="select" data-placeholder="Orientation">
-            <option></option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-            <option>Option 4</option>
-        </select>
+        <button class="button button--primary button--full-width button--submit">Join us</button>
     </div>
     <div class="form-main__item">
-        <button class="button button--primary button--full-width">Join us</button>
-    </div>
-    <div class="form-main__item">
-        <div class="checkbox_wrap">
-            <input class="styled-checkbox" type="checkbox" id="chk1" name="chk"/>
-            <label for="chk1"><span><b></b></span>website.com is a site dedicated to people above 18 years old, looking for casual dating and meeting a life partner. To join you must have read and agree to our Terms and Conditions and Privacy Policy.</label>
+        <div class="checkbox">
+            <input class="checkbox__input" type="checkbox" id="checkbox" name="checkbox"/>
+            <label class="checkbox__label" for="checkbox"><span class="checkbox__icon"><b></b></span>website.com is a site dedicated to people above 18 years old, looking for casual dating and meeting a life partner. To join you must have read and agree to our Terms and Conditions and Privacy Policy.</label>
         </div>
     </div>
 </form>
